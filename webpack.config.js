@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: [
-        "./src/js/app.js",
+        "./src/js/index.js",
         "./src/scss/index.scss"
     ],
     output: {
@@ -28,5 +28,12 @@ module.exports = {
                 loader: "sass-loader",
             }]
         }]
+    },
+    devServer: {
+        stats: 'errors-only',
+        historyApiFallback: {
+            index: './public/index.html'
+        }
+
     }
 };
